@@ -26,8 +26,17 @@ function displayResults(responseJson) {
   $('.hidden').removeClass('hidden');
 }
 
+function clear() {
+  $('#clear').on('click', function(event){
+    console.log("check");
+    $('section').empty();
+    location.reload();
+  })
+}
+
 $(function() {
   console.log('App loaded! Waiting for submit!');
   watchForm();
+  clear();
 });
 
